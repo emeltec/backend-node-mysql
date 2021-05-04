@@ -79,7 +79,7 @@ app.put('/products', (req, res) => {
   const values = Object.values(req.body)
   console.log(values)
  
-  const sql = "UPDATE Frutas SET nombre=?, precio=?, color=? WHERE Id = ?"
+  const sql = "UPDATE Frutas SET Nombre=?, Color=?, Precio=? WHERE Id=?"
   db.query(sql, values, (error, result) => {
     if(error){
       throw error;
